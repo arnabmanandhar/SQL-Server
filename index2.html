@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <style>
+    body {
+      background-color: black;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      max-width: 500px;
+      margin-top: 100px;
+    }
+    .container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #337ab7;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      font-family: "Times New Roman", Times, serif;
+    }
+    .container .form-group {
+      margin-bottom: 20px;
+    }
+    .container label {
+      font-weight: bold;
+      color: black;
+    }
+    .container input[type="text"],
+    .container input[type="password"],
+    .container input[type="number"],
+    .container input[type="email"],
+    .container input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: black;
+      background-color: #f8f8f8;
+    }
+    .container input[type="text"]:focus,
+    .container input[type="password"]:focus,
+    .container input[type="number"]:focus,
+    .container input[type="email"]:focus,
+    .container input[type="tel"]:focus {
+      outline: none;
+      border-color: #337ab7;
+      box-shadow: 0px 0px 5px #337ab7;
+    }
+    .container input[type="text"]::placeholder,
+    .container input[type="password"]::placeholder,
+    .container input[type="number"]::placeholder,
+    .container input[type="email"]::placeholder,
+    .container input[type="tel"]::placeholder {
+      color: #bbbbbb;
+    }
+    .container .btn-primary {
+      width: 100%;
+      background-color: #337ab7;
+      border-color: #337ab7;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease;
+    }
+    .container .btn-primary:hover,
+    .container .btn-primary:focus {
+      background-color: #23527c;
+      border-color: #23527c;
+    }
+    .container small {
+      font-size: 12px;
+      color: #888888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="font-family: 'Times New Roman', Times, serif;">Registration Form</h1>
+    <form action="connect.php" method="post">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <div class="radio-group">
+          <label class="radio-inline">
+            <input type="radio" name="gender" value="m" required> Male
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="gender" value="f" required> Female
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="gender" value="o" required> Others
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="number">Phone Number</label>
+        <input type="tel" class="form-control" id="number" name="number" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="text-right">
+      <small>&copy; Arnab</small>
+    </div>
+  </div>
+</body>
+</html>
